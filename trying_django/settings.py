@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,11 +48,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+LOCAL_APPS = (
+    'tweets',
+)
+
 ROOT_URLCONF = 'trying_django.urls'
 
 WSGI_APPLICATION = 'trying_django.wsgi.application'
 
-
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
